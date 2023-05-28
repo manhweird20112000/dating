@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ms+Madi&display=swap');
+@import "tailwind";
+
+main{
+  background-image: url("/bg.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @apply relative;
+}
+.day{
+  font-family: 'Montserrat', sans-serif;
+  @apply text-center text-9xl font-black  ;
+}
+.heart{
+  @apply relative lg:w-10 lg:h-10 h-6 w-6 bg-red-600 rounded-br-md;
+  animation: pulse 1s infinite;
+  &:after{
+    content: ' ';
+    @apply absolute lg:w-10 lg:h-10 h-6 w-6 rounded-full bg-red-600 -top-1/2;
+  }
+  &:before{
+    content: ' ';
+    @apply absolute lg:w-10 lg:h-10 h-6 w-6 rounded-full bg-red-600 -left-1/2;
+  }
+}
+
+.couple {
+  @apply flex items-center flex-col;
+  & > p{
+    font-family: 'Ms Madi', cursive;
+@apply mt-3 font-bold lg:text-3xl text-xl text-white;
+  }
+  & > div{
+    & >p{
+      font-family: 'Montserrat', sans-serif;
+      @apply font-medium lg:text-base text-xs text-white;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 20% {
+    transform: rotate(45deg) scale(1);
+  }
+  30% {
+    transform: rotate(45deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(45deg) scale(1);
+  }
+  60% {
+    transform: rotate(45deg) scale(1.1);
+  }
+  70%, 100% {
+    transform: rotate(45deg) scale(1);
+  }
+}
+
