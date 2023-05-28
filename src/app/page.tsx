@@ -42,7 +42,7 @@ export default function Home() {
              <div className={'lg:-mt-20 -mt-12'}>
                  <Heart />
              </div>
-             <Couple avatar='/female.jpg' name={'Đinh Mạnh'} date={'20-11-2000'} gender='male' />
+             <Couple avatar='/male.webp' name={'Đinh Mạnh'} date={'20-11-2000'} gender='male' />
          </div>
      </div>
     </main>
